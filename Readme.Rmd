@@ -1,0 +1,76 @@
+Welcome!
+
+Welcome to Data Analytics:  Analyze Stock Data using the R Quantmod Package.  This is a project-based course which should take approximately 2 hours to finish. Before diving into the project, please take a look at the course objectives and structure:
+Course Objectives
+
+In this course, we are going to focus on four learning objectives:
+
+    Ability to pull down Stock Data using the Quantmod Package.
+
+    Practice creating daily returns quickly on mutliple stocks simultaneously.
+
+    Apply a graph comparing the daily returns of the stocks chosen.
+
+    Calculate the Sharpe Ratio in order to compare stock risk.
+
+By the end of this course, you will be able to apply and perform your own stock analysis.
+Course Structure
+
+This course is divided into 4 parts:
+
+    Course Overview: This introductory reading material.
+
+    Data Analytics:  Analyze Stock Data using the R Quantmod Package.  This is the hands on project that we will work on in Rhyme.
+
+    Graded Quiz: This is the final assignment that you need to pass in order to finish the course successfully.
+
+Project Structure
+
+The hands on project on 
+
+    Data Analytics:  Analyze Stock Data using the R Quantmod Package is divided into following tasks:
+
+Task 1: In this task the Learner will be introduced to the Course Objectives, which is to how to pull Stock Data for analytics using the R quantmod Package. There will be a short discussion about the Interface and an Instructor Bio.
+
+Task 2:  The Learners will first download stock data using quantmod and the Yahoo Finance API.  The Learner will then get practice with the syntax of quantmod by sub-setting the stock data.
+
+Task 3: The Learner will get more experience manipulating the data using some R sub-setting functions.
+
+Task 4: The Learner will be introduced to Data Frames and Time Series Objects and learn the difference between them.  Moreover the learner will get practice converting between the two.
+
+Task 5: The Learner will get practice pulling down adjusted daily return stock data using Microsoft's stock.  The Instructor will teach you how to calculate the daily returns as well.
+
+Task 6: The Learner will get practice combining data for comparison.  FB and Microsoft will be the two companies used.  Remember this is more difficult than it appears since Microsoft has been around longer than Facebook (unequal rows).  The Instructor will show you how to merge the data as to not have errors.
+
+Task 7: Learners will get practice calculating the Sharp Ratio on multiple stocks to see which stock is truly the riskier asset or the stock with the best risk return profile.  
+Meet the Instructor
+
+My name is Chris Shockley.  I use R every day for work.  I like building quick machine learning models to answer questions.  For fun I like Astronomy and working out.  And of course teaching.  I look forward to helping you by providing some fun projects that will assist you in your R journey.
+About Rhyme
+
+This course runs on Coursera's hands-on platform called Rhyme. On Rhyme, you do projects in a hands-on manner in your browser. You will get instant access to pre-configured cloud desktops that have all the software and data you will need. So, you can just focus on the learning. For this project, this means instant access to a cloud desktop with Python, Jupyter, and TensorFlow pre-installed.  
+
+If you need help troubleshooting Rhyme, please refer to the Coursera Help Center  for more information.
+Earn a Certificate
+
+After you have completed the Data Analytics:  Analyze Stock Data using the R Quantmod Package. hands-on project, you will be able to assess your knowledge using an ungraded assignment. Once you are comfortable with the concepts, take the final quiz, score higher than 80% to earn your certificate.
+
+Now we will begin our Project where we will pull down Stock Data and use it to complete analytics.
+
+    Task 1: In this task the Learner will be introduced to the Course Objectives, which is to how to pull Stock Data for analytics using the R quantmod Package. There will be a short discussion about the Interface and an Instructor Bio.
+
+    Task 2:  The Learners will first download stock data using quantmod and the Yahoo Finance API.  The Learner will then get practice with the syntax of quantmod by sub-setting the stock data.
+     
+
+    Task 3: The Learner will get more experience manipulating the data using some R sub-setting functions.
+
+    Task 4: The Learner will be introduced to Data Frames and Time Series Objects and learn the difference between them.  Moreover the learner will get practice converting between the two.
+
+    Task 5: The Learner will get practice pulling down adjusted daily return stock data using Microsoft's stock.  The Instructor will teach you how to calculate the daily returns as well.
+     
+
+    Task 6: The Learner will get practice combining data for comparison.  FB and Microsoft will be the two companies used.  Remember this is more difficult than it appears since Microsoft has been around longer than Facebook (unequal rows).  The Instructor will show you how to merge the data as to not have errors.
+
+    Task 7: Learners will get practice calculating the Sharp Ratio on multiple stocks to see which stock is truly the riskier asset or the stock with the best risk return profile.  
+
+While you are watching me work on each step, you will get a cloud desktop with all the required software pre-installed. This will allow you to follow along the instructions to complete the above mentioned tasks. After all, we learn best with active, hands-on learning

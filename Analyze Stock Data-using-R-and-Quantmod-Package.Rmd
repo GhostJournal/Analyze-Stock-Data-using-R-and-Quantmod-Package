@@ -1,0 +1,133 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE}
+library(tidyverse)
+library(TTR)
+library(quantmod)
+library(PerformanceAnalytics)
+library(RColorBrewer)
+library(tseries)
+library(lubridate)
+library(Quandl)
+Quandl.api_key("zrcB2Ejv9UmvhPCUsy2_")
+options("getSymbols.yahoo.warning"=FALSE)
+
+```
+
+#Introduction:  We will load the libraries and capture some data for a stock and do a quick line graph
+
+```{r}
+MSFT <- getSymbols("MSFT", auto.assign = FALSE)
+head(MSFT)
+dim(MSFT)
+```
+
+# Our first task will be to download daily returns for a new Stock.  We can start with Amazon.
+```{r}
+
+```
+
+# Let's look at the Head and Tail of the Df
+```{r}
+head(MSFT)
+tail(MSFT)
+dim(MSFT)
+str(MSFT)
+class(MSFT)
+```
+
+# In this task we're going to learn subsetting fundementals. We can do it by row/column reference or by row/column name
+
+```{r}
+df <- as.data.frame(MSFT)
+class(df)
+head(df)
+dim(df)
+str(df)
+
+df <- as.xts(df)
+class(df)
+
+write.csv(df,"newdataMSFT.csv")
+```
+
+#In this task I am going to show you how to rename the columns or easier subsetting.  I am also going to show you how to save data into .csv file for import into excel.  
+
+```{r}
+
+```
+
+
+
+# In this task we will learn about xts. zoo objects and how to convert back and forth between xts and data frames.
+
+```{r}
+
+```
+
+
+# In this task we will create a Daily Return and then Chart the data for one stock.
+
+```{r}
+tsla <- getSymbols("TSLA",auto.assign = FALSE)
+head(tsla)
+
+
+head(dailyReturn(tsla$TSLA.Adjusted))
+
+plot(dailyReturn(tsla$TSLA.Adjusted,type="l"))
+```
+
+#Next Project will consist of more data analytics and comparing multiple stocks against each other.
+```{r}
+msft <- getSymbols("MSFT" , auto.assign = FALSE)
+
+msft_Ad <- Ad(msft)
+head(msft_Ad)
+
+msft_daily <- dailyReturn(msft_Ad)
+head(msft_daily)
+
+new_msft <- dailyReturn(getSymbols("MSFT",auto.assign = F))
+head(new_msft)
+```
+
+```{r}
+meta <- getSymbols("META",auto.assign = F)
+head(meta)
+
+meta_Ad <- meta$META.Adjusted
+head(meta_Ad)
+
+meta_daily <- dailyReturn(meta_Ad)
+dim(meta_daily)
+
+new_meta <- dailyReturn(Ad(getSymbols("META",auto.assign = F)))
+```
+
+```{r}
+comb <- merge(new_msft,new_meta)
+head(comb)
+
+comb_traded <- merge(new_msft,new_meta,all = F)
+head(comb_traded)
+dim(comb_traded)
+```
+```{r}
+charts.PerformanceSummary(comb_traded, main = "META vs MSFT")
+```
+
+
+```{r}
+table.AnnualizedReturns(comb_traded,
+                        scale =252, 
+                        Rf =0.004/252)
+```
+
